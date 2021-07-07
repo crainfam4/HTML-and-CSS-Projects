@@ -1,2 +1,4 @@
 # HTML and CSS Projects
- Projects created during the HTML and CSS course.
+
+Introduction 
+This repository contains the projects created during the HTML and CSS course.
