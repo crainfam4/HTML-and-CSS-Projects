@@ -1,0 +1,18 @@
+table {
+	border: 1px solid blue;
+}
+
+td:hover {
+	background-color: pink;
+	color: black;
+}
+
+tr, th {
+	background-color: red;
+	color: aqua;
+}
+
+tr, td {
+	background-color: AliceBlue;
+	color: BlueViolet;
+}
