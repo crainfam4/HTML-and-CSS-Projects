@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Peaceful Pines Cozy Campground</title>
-		<link rel="stylesheet" href="./CSS/one_page_website.css">
-        <link rel="stylesheet" href="./CSS/animations.css">
+		<link rel = "stylesheet" href = "./CSS/one_page_website.css">
+        <script src = "./JavaScript/one_page_website.js" defer></script>
 	</head>
 	<body>
 		
@@ -13,7 +13,7 @@
 			<div>
 				<ul>
 					<a href="#home" id="link"><li>Home</li></a>
-					<a href="#gallery" id="link"><li>Gallery</li></a>
+					<a href="#lightbox" id="link"><li>Lightbox</li></a>
 					<a href="#video" id="link"><li>Video</li></a>
 					<a href="#contact" id="link"><li>Reservations</li></a>
 				</ul>
@@ -31,114 +31,138 @@
 		</div>
 		<!--END HOME-->
 		
-		<!--GALLERY-->
-			<div id="gallery">
-				<h1>Gallery</h1>
-				<div>
+		<!--Lightbox-->
+		<div id="lightbox">
+			<h1>Lightbox</h1>
+			<div class = "row">
+				<div class = "column">
+					<image src="./images/thumb/thumbnail_1new.jpg" onclick = "openModal();currentSlide(1)" class = "hover-shadow" width = 480>
+				</div>
+				<div class = "column">
+					<image src="./images/thumb/thumbnail_2new.jpg" onclick = "openModal();currentSlide(2)" class = "hover-shadow" width = 480>
+				</div>
+				<div class = "column">
+					<image src="./images/thumb/thumbnail_3new.jpg" onclick = "openModal();currentSlide(3)" class = "hover-shadow" width = 480>		
+				</div>
+				<div class = "column">
+					<image src="./images/thumb/thumbnail_4new.jpg" onclick = "openModal();currentSlide(4)" class = "hover-shadow" width = 400>
+				</div>
+				<div class = "column">
+					<image src="./images/thumb/thumbnail_5new.jpg" onclick = "openModal();currentSlide(5)" class = "hover-shadow" width = 400>
+				</div>
+				<div class = "column">
+					<image src="./images/thumb/thumbnail_6new.jpg" onclick = "openModal();currentSlide(6)" class = "hover-shadow" width = 400>
+				</div>
+				<div class = "column">
+					<image src="./images/thumb/thumbnail_7new.jpg" onclick = "openModal();currentSlide(7)" class = "hover-shadow" width = 400>
+				</div>
+				<div class = "column">
+					<image src="./images/thumb/thumbnail_8new.jpg" onclick = "openModal();currentSlide(8)" class = "hover-shadow" width = 400>
+				</div>
+				<div class = "column">
+					<image src="./images/thumb/thumbnail_9new.jpg" onclick = "openModal();currentSlide(9)" class = "hover-shadow" width = 400>
+				</div>	
+			</div>
+		</div>
+		<!--END GALLERY-->
+
+		<!-- The Modal/Lightbox -->
+		<div id = "myModal" class = "modal">
+			<span class = "close cursor" onclick = "closeModal()">&times;</span>
+			<div class = "modal-content">
+
+				<div class = "mySlides">
+					<div class = "numbertext">1 / 9</div>
+					<img src = "./images/thumb/thumbnail_1new.jpg" style = "width: 100%">
+				</div>
+
+				<div class = "mySlides">
+					<div class = "numbertext">2 / 9</div>
+					<img src = "./images/thumb/thumbnail_2new.jpg" style = "width: 100%">
+				</div>
 				
-					<!--PHOTO CONTAINER 1-->
-					<div>
-						<div>
-							<image src="./images/thumb/thumbnail_1.jpg" alt="Lakefront campsites and boat/canoe rentals" width="200">
-							<div>
-								<h3>Experience one of our lakefront campsites, and rent a rowboat or canoe!</H3>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 1-->
-					
-					<!--PHOTO CONTAINER 2-->
-					<div>
-						<div>
-							<image src="./images/thumb/thumbnail_2.jpg" alt="More lakefront campsites" width="200">
-							<div>
-								<h3>More sites close to the water. It's a relaxing place to be.</H3>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 2-->
-					
-					<!--PHOTO CONTAINER 3-->
-					<div>
-						<div>
-							<image src="./images/thumb/thumbnail_3.jpg" alt="Private, wooded sites" width="200">
-							<div>
-								<h3>The sites that are not on the water are private and wooded.</H3>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 3-->
-					
-					<!--PHOTO CONTAINER 4-->
-					<div>
-						<div>
-							<image src="./images/thumb/thumbnail_4.jpg" alt="Swimming pool" width="200">
-							<div>
-								<h3>Take a dip in the heated pool.</H3>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 4-->
-					
-					<!--PHOTO CONTAINER 5-->
-					<div>
-						<div>
-							<image src="./images/thumb/thumbnail_5.jpg" alt="Miniature Golf Course" width="200">
-							<div>
-								<h3>How about a round of mini-golf?</H3>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 5-->
-					
-					<!--PHOTO CONTAINER 6-->
-					<div>
-						<div>
-							<image src="./images/thumb/thumbnail_6.jpg" alt="Lake with people on beach and in water" width="200">
-							<div>
-								<h3>Swimming, paddleboarding, fishing, and watersports are several of the popular lake activities enjoyed by many families while staying at our campground.</H3>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 6-->
-					
-					<!--PHOTO CONTAINER 7-->
-					<div>
-						<div>
-							<image src="./images/thumb/thumbnail_7.jpg" alt="Hiking trail with waterfall" width="200">
-							<div>
-								<h3>Enjoy the nearby hiking trails.</H3>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 7-->
-					
-					<!--PHOTO CONTAINER 8-->
-					<div>
-						<div>
-							<image src="./images/thumb/thumbnail_8.jpg" alt="Trail and boardwalk within the campground" width="200">
-							<div>
-								<h3>Explore the campground while you are here!</H3>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 8-->
-					
-					<!--PHOTO CONTAINER 9-->
-					<div>
-						<div>
-							<image src="./images/thumb/thumbnail_9.jpg" alt="Camp store" width="200">
-							<div>
-								<h3>Visit our store for those all-important items you forgot, or when you get that ice cream craving.</H3>
-							</div>
-						</div>
-					</div>
-					<!--END PHOTO CONTAINER 9-->
-				
+				<div class = "mySlides">
+					<div class = "numbertext">3 / 9</div>
+					<img src = "./images/thumb/thumbnail_3new.jpg" style = "width: 100%">
+				</div>
+
+				<div class = "mySlides">
+					<div class = "numbertext">4 / 9</div>
+					<img src = "./images/thumb/thumbnail_4new.jpg" style = "width: 100%">
+				</div>
+
+				<div class = "mySlides">
+					<div class = "numbertext">5 / 9</div>
+					<img src = "./images/thumb/thumbnail_5new.jpg" style = "width: 100%">
+				</div>
+
+				<div class = "mySlides">
+					<div class = "numbertext">6 / 9</div>
+					<img src = "./images/thumb/thumbnail_6new.jpg" style = "width: 100%">
+				</div>
+
+				<div class = "mySlides">
+					<div class = "numbertext">7 / 9</div>
+					<img src = "./images/thumb/thumbnail_7new.jpg" style = "width: 100%">
+				</div>
+
+				<div class = "mySlides">
+					<div class = "numbertext">8 / 9</div>
+					<img src = "./images/thumb/thumbnail_8new.jpg" style = "width: 100%">
+				</div>
+
+				<div class = "mySlides">
+					<div class = "numbertext">9 / 9</div>
+					<img src = "./images/thumb/thumbnail_9new.jpg" style = "width: 100%">
+				</div>
+
+				<!-- Next/previous controls -->
+				<a class = "prev" onclick = "plusSlides(-1)">&#10094;</a>
+				<a class = "next" onclick = "plusSlides(1)">&#10095;</a>
+
+				<!-- Caption text -->
+				<div class = "caption-container">
+					<p id = "caption"></p>
+				</div>
+
+				<!-- Thumbnail image controls -->
+				<div class = "column">
+					<img class = "camp" src = "./Images/thumb/thumbnail_1new.jpg" onclick = "currentSlide(1)" alt = "Lakefront campsites and boat/canoe rentals">
+				</div>
+
+				<div class = "column">
+					<img class = "camp" src = "./Images/thumb/thumbnail_2new.jpg" onclick = "currentSlide(2)" alt = "More lakefront campsites">
+				</div>
+
+				<div class = "column">
+					<img class = "camp" src = "./Images/thumb/thumbnail_3new.jpg" onclick = "currentSlide(3)" alt = "Private, wooded sites">
+				</div>
+
+				<div class = "column">
+					<img class = "camp" src = "./Images/thumb/thumbnail_4new.jpg" onclick = "currentSlide(4)" alt = "Swimming pool">
+				</div>
+
+				<div class = "column">
+					<img class = "camp" src = "./Images/thumb/thumbnail_5new.jpg" onclick = "currentSlide(5)" alt = "Miniature Golf Course">
+				</div>
+
+				<div class = "column">
+					<img class = "camp" src = "./Images/thumb/thumbnail_6new.jpg" onclick = "currentSlide(6)" alt = "Lake with people on beach and in water">
+				</div>
+
+				<div class = "column">
+					<img class = "camp" src = "./Images/thumb/thumbnail_7new.jpg" onclick = "currentSlide(7)" alt = "Hiking trail with waterfall">
+				</div>
+
+				<div class = "column">
+					<img class = "camp" src = "./Images/thumb/thumbnail_8new.jpg" onclick = "currentSlide(8)" alt = "Trail and boardwalk within the campground">
+				</div>
+
+				<div class = "column">
+					<img class = "camp" src = "./Images/thumb/thumbnail_9new.jpg" onclick = "currentSlide(9)" alt = "Camp store">
 				</div>
 			</div>
-		</section>
-		<!--END GALLERY-->
+		</div>
 		
 		<!--VIDEO-->
 		<section>
